@@ -1,0 +1,5 @@
+<% @ruas.each do |rua| %>
+	<p><%= rua.numero %> <%= link_to "delete", rua_path(rua), method: :delete %></p>
+<% end %>
+
+<%= link_to "nova", new_rua_path %>

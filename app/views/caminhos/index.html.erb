@@ -1,0 +1,23 @@
+<%= link_to "Novo", new_caminho_path, class: 'btn btn-success' %><br /><br />
+
+<table class="table table-striped">
+	<tr>
+		<th>Rua</th>
+		<th>Estante</th>
+		<th>Prateleira</th>
+		<th>Caixa</th>
+		<th>Conteúdo</th>
+		<th>Ações</th>
+	</tr>
+
+	<% @caminhos.each do |caminho| %>
+		<tr>
+			<td><%= caminho.rua.numero %></td>
+			<td><%= caminho.estante.numero %></td>
+			<td><%= caminho.prateleira.letra %></td>
+			<td><%= caminho.caixa.numero %></td>
+			<td><%= caminho.conteudo %></td>
+			<td><%= link_to "Editar", edit_caminho_path(caminho) %> | <%= link_to "Apagar", caminho_path(caminho), method: :delete %></td>
+		</tr>
+	<% end %>
+</table>

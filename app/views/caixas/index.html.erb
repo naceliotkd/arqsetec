@@ -1,0 +1,5 @@
+<% @caixas.each do |caixa| %>
+	<p><%= caixa.numero %> <%= link_to "delete", caixa_path(caixa), method: :delete %></p>
+<% end %>
+
+<%= link_to "nova", new_caixa_path %>

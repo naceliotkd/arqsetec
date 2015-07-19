@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Arqsetec</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">
+	        ArqSetec
+	      </a>
+
+	      <div class="navbar-right">
+					<%= link_to "ruas", ruas_path %> <%= link_to "caixas", caixas_path %> <%= link_to "estantes", estantes_path %> <%= link_to "prateleiras", prateleiras_path %> <%= link_to "caminhos", caminhos_path %>
+				</div>
+	    </div>
+	  </div>
+	</nav>
+
+	<div class="container">
+		<%= yield %>
+	</div>
+
+</body>
+</html>

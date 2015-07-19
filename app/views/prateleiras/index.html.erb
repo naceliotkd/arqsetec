@@ -1,0 +1,5 @@
+<% @prateleiras.each do |prateleira| %>
+	<p><%= prateleira.letra %> <%= link_to "delete", prateleira_path(prateleira), method: :delete %></p>
+<% end %>
+
+<%= link_to "nova", new_prateleira_path %>

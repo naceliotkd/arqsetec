@@ -1,0 +1,20 @@
+<%= form_for @caminho do |f| %>
+	<p><%= f.text_field :conteudo, placeholder: :conteudo %></p>
+
+	<p>Rua:</p>
+	<%= f.select :rua_id, options_for_select(@ruas.map{|r| [r.numero, r.id]}, @caminho.rua.id) %>
+
+	<p>Estante:</p>
+	<%= f.select :estante_id, options_for_select(@estantes.map{|e| [e.numero, e.id]}, @caminho.estante.id) %>
+
+	<p>Prateleira:</p>
+	<%= f.select :prateleira_id, options_for_select(@prateleiras.map{|p| [p.letra, p.id]}, @caminho.prateleira.id) %>
+
+	<p>Caixa:</p>
+	<%= f.select :caixa_id, options_for_select(@caixas.map{|c| [c.numero, c.id]}, @caminho.caixa.id) %>
+
+	<br />
+	<br />
+
+	<%= f.submit nil, class: 'btn btn-primary' %>
+<% end %>

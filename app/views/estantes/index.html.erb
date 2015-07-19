@@ -1,0 +1,5 @@
+<% @estantes.each do |estante| %>
+	<p><%= estante.numero %> <%= link_to "delete", estante_path(estante), method: :delete %></p>
+<% end %>
+
+<%= link_to "nova", new_estante_path %>

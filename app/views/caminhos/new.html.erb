@@ -1,0 +1,19 @@
+<%= form_for @caminho do |f| %>
+	<p><%= f.text_field :conteudo, placeholder: :conteudo %></p>
+
+	<p>Rua:</p>
+	<%= f.select :rua_id, options_from_collection_for_select(@ruas, :id, :numero) %>
+
+	<p>Estante:</p>
+	<%= f.select :estante_id, options_from_collection_for_select(@estantes, :id, :numero) %>
+
+	<p>Prateleira:</p>
+	<%= f.select :prateleira_id, options_from_collection_for_select(@prateleiras, :id, :letra) %>
+
+	<p>Caixa:</p>
+	<%= f.select :caixa_id, options_from_collection_for_select(@caixas, :id, :numero) %>
+
+	<br />
+
+	<%= f.submit %>
+<% end %>

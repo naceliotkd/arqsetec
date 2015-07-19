@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  conteudo: MyText
+  rua_id: 
+  estante_id: 
+  prateleira_id: 
+  caixa_id: 
+
+two:
+  conteudo: MyText
+  rua_id: 
+  estante_id: 
+  prateleira_id: 
+  caixa_id: 
